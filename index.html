@@ -37,9 +37,9 @@
         </aside>
 
         <script>
-            const texto = "Tecnologia"; // O texto que será digitado
-            const delay = 100; // O atraso entre cada letra em milissegundos
-            const span = document.getElementById("tecnologia"); // Elemento span onde o texto será inserido
+            const texto = "Tecnologia"; 
+            const delay = 100; 
+            const span = document.getElementById("tecnologia");
     
             let index = 0;
     
@@ -49,7 +49,7 @@
                     index++;
                     setTimeout(escreverTexto, delay);
                 } else {
-                    // Após a digitação completa, adiciona o underline e inicia a animação de piscar
+                    
                     span.innerHTML += "<u id='underline'>_</u>";
                     piscarUnderline();
                 }
@@ -63,13 +63,13 @@
                     } else {
                         underline.style.visibility = "visible";
                     }
-                }, 500); // Intervalo de 500ms para piscar
+                }, 500); 
             }
     
-            escreverTexto(); // Inicia o efeito de escrita
+            escreverTexto(); 
         </script>
         <article>
-         <img src="./components/images/Lovepik_com-380246324-blue-classroom-learning-education-illustration-computer-blackboard-information.png" alt="mulher-roxa"> <!-- Imagem principal -->
+         <img src="./components/images/Lovepik_com-380246324-blue-classroom-learning-education-illustration-computer-blackboard-information.png" alt="mulher-roxa">
         </article>
         <footer>
             <p>Apoio:</p> 
