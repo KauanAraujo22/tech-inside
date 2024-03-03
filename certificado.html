@@ -14,7 +14,7 @@
             <li><a href="index.html"><i class="fas fa-home"></i> Tech Inside</a></li> 
             <li><a href="#"><i class="fas fa-chart-line"></i> Ranking</a></li> 
             <li><a href="#"><i class="fas fa-graduation-cap"></i> Meus Certificados</a></li> 
-            <li id="usuario"><a href="#"><i class="fas fa-user"></i> Olá, <span id="nomeUsuario"></span></a></li> <!-- Seção do usuário logado -->
+            <li id="usuario"><a href="#"><i class="fas fa-user"></i> Olá, <span id="nomeUsuario"></span></a></li> 
         </ul>
     </header>
 
@@ -31,7 +31,6 @@
     <a href="./components/images/Certificado_Participacao.png" download class="download-button" id="downloadButton">
         Baixar Certificado
     </a>
-    <!-- Script JavaScript -->
 <script>
     const nomeUsuario = localStorage.getItem('nomeUsuario');
 
@@ -39,11 +38,9 @@
         document.getElementById('nomeUsuario').textContent = nomeUsuario;
         document.getElementById('nomeUsuarioCurso').textContent = nomeUsuario;
     }
-
-// Função para criar confetes
 function createConfetti() {
-    const colors = ['#f0f8ff']; // Cores dos confetes
-    const numConfettis = 40; // Número de confetes
+    const colors = ['#f0f8ff']; 
+    const numConfettis = 40; 
 
     for (let i = 0; i < numConfettis; i++) {
         const confetti = document.createElement('div');
@@ -61,7 +58,6 @@ function createConfetti() {
     }
 }
 
-// Chamada para criar confetes quando o documento estiver pronto
 document.addEventListener('DOMContentLoaded', function() {
     createConfetti();
 });
