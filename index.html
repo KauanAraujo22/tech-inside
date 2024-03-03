@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Inside</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="#"><i class="fas fa-home"></i> Tech Inside</a></li>
+            <li><a href="#"><i class="fas fa-info-circle"></i> Quem Somos</a></li> 
+            <li><a href="#"><i class="fas fa-briefcase"></i> Trabalhe Conosco</a></li> 
+            <li><a href="#"><i class="fas fa-envelope"></i> Contato</a></li> 
+        </ul>     
+    </header> 
+    <main>
+        <aside>
+            <h2>Impulsionando e <br>
+                Desenvolvendo Negócios com<br>
+                <span id="tecnologia"></span>
+            </h2> 
+            <p>
+                Conectando Empreendedores locais ao poder da Tecnologia.<br>
+                <span>Capacitando. Inovando. Crescendo Juntos.</span> 
+            </p>
+            <form action="Meus_Cursos.html" method="get">
+                <input type="text" name="nome" placeholder="Nome"> 
+                <input type="email" name="email" placeholder="E-mail"> 
+                <input type="submit" value="Começar">
+
+            </form>
+        </aside>
+
+        <script>
+            const texto = "Tecnologia"; // O texto que será digitado
+            const delay = 100; // O atraso entre cada letra em milissegundos
+            const span = document.getElementById("tecnologia"); // Elemento span onde o texto será inserido
+    
+            let index = 0;
+    
+            function escreverTexto() {
+                if (index < texto.length) {
+                    span.textContent += texto.charAt(index);
+                    index++;
+                    setTimeout(escreverTexto, delay);
+                } else {
+                    // Após a digitação completa, adiciona o underline e inicia a animação de piscar
+                    span.innerHTML += "<u id='underline'>_</u>";
+                    piscarUnderline();
+                }
+            }
+    
+            function piscarUnderline() {
+                const underline = document.getElementById("underline");
+                setInterval(() => {
+                    if (underline.style.visibility === "visible") {
+                        underline.style.visibility = "hidden";
+                    } else {
+                        underline.style.visibility = "visible";
+                    }
+                }, 500); // Intervalo de 500ms para piscar
+            }
+    
+            escreverTexto(); // Inicia o efeito de escrita
+        </script>
+        <article>
+         <img src="./components/images/Lovepik_com-380246324-blue-classroom-learning-education-illustration-computer-blackboard-information.png" alt="mulher-roxa"> <!-- Imagem principal -->
+        </article>
+        <footer>
+            <p>Apoio:</p> 
+            <div class="conteudo">
+                <img src="./components/images/uninter-logo-1.png" alt="Logo Uninter">
+            </div> 
+        </footer>
+    </main>
+</body>
+</html>

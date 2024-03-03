@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/certificado.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Certificados</title>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Tech Inside</a></li> 
+            <li><a href="#"><i class="fas fa-chart-line"></i> Ranking</a></li> 
+            <li><a href="#"><i class="fas fa-graduation-cap"></i> Meus Certificados</a></li> 
+            <li id="usuario"><a href="#"><i class="fas fa-user"></i> Olá, <span id="nomeUsuario"></span><img src="./components/images/Tech_Inside_Avatar.png" alt="Avatar"></a></li> <!-- Seção do usuário logado -->
+        </ul>
+    </header>
+
+    <main>
+        <aside>
+            <h2 id="mensagemParabens">Parabéns por concluir o curso, <span id="nomeUsuarioCurso"></span>!</h2>
+            <h3>Abaixo está o seu Certificado para Download.</h3>
+        </aside>
+        <article>
+            <img src="./components/images/wincertiicado.png" alt="Imagem de comemoração pelo Certificado" id="certificado" class="animated-image">
+        </article>
+        <div id="confetti-container"></div>
+    </main>
+    <a href="./components/images/Certificado_Participacao.png" download class="download-button" id="downloadButton">
+        Baixar Certificado
+    </a>
+    <!-- Script JavaScript -->
+<script>
+    const nomeUsuario = localStorage.getItem('nomeUsuario');
+
+    if (nomeUsuario) {
+        document.getElementById('nomeUsuario').textContent = nomeUsuario;
+        document.getElementById('nomeUsuarioCurso').textContent = nomeUsuario;
+    }
+
+// Função para criar confetes
+function createConfetti() {
+    const colors = ['#f0f8ff']; // Cores dos confetes
+    const numConfettis = 40; // Número de confetes
+
+    for (let i = 0; i < numConfettis; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+
+        confetti.style.left = Math.random() * window.innerWidth + 'px';
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+        document.getElementById('confetti-container').appendChild(confetti);
+
+        confetti.addEventListener('animationend', () => {
+            confetti.remove();
+        });
+    }
+}
+
+// Chamada para criar confetes quando o documento estiver pronto
+document.addEventListener('DOMContentLoaded', function() {
+    createConfetti();
+});
+</script>
+
+</body>
+</html>

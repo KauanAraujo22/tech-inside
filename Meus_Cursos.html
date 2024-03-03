@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./styles/Meus_Cursos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Document</title>
+    <style>
+    
+        main {
+            margin-bottom: 100px; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Tech Inside</a></li> 
+            <li><a href="#"><i class="fas fa-chart-line"></i> Ranking</a></li> 
+            <li><a href="#"><i class="fas fa-graduation-cap"></i> Meus Certificados</a></li> 
+            <li id="usuario"><a href="#"><i class="fas fa-user"></i> Olá, <span id="nomeUsuario"></span></a></li>
+        </ul>
+        
+    </header>
+
+    <main>
+        <aside>
+            <h3>Bem-vindo (a), <span id="bemVindoUsuario"></span></h3> 
+            <h2>
+
+                Aqui você encontrará uma seleção de cursos disponíveis. É importante lembrar que os cursos são oferecidos por temporadas. Portanto, não se esqueça de retornar a cada duas semanas para aproveitar os novos conteúdos e oportunidades de aprendizado!
+                Aproveite!</h2> 
+            
+            <p>Não sabe por onde começar? <br>
+            Veja o que preparamos para você<br>
+        logo abaixo.</p>
+        </aside>
+        <article>
+            <img src="./components/images/certificado_imagem_mulher.png" alt="mulher-roxa">
+        </article>
+    </main>
+    <div class="curso_mkt">
+        <a href="mkt.html">
+            <img src="./components/images/MKT2_TechInside.png" alt="mkt"> 
+        </a>
+    </div>
+
+    <div class="curso_ngc">
+        <a href="#">
+            <img src="./components/images/NGC3_TechInside.png" alt="ngc"> 
+        </a>
+    </div>
+
+    <div class="curso_web">
+        <a href="#">
+            <img src="./components/images/WEB_TechInside.png" alt="ngc"> 
+        </a>
+    </div>
+
+    <a id="texto">
+        <p>ㅤㅤ</p>  </a>
+
+    <script>
+
+        function obterNomeUsuario() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const nome = urlParams.get('nome');
+            return nome;
+        }
+        const nomeUsuario = obterNomeUsuario();
+        if (nomeUsuario) {
+            document.getElementById('nomeUsuario').textContent = nomeUsuario;
+            document.getElementById('bemVindoUsuario').textContent = nomeUsuario;
+            localStorage.setItem('nomeUsuario', nomeUsuario);
+        }
+    </script>
+
+    <footer>
+        <p>Apoio:</p> 
+        <div class="conteudo">
+            <img src="./components/images/uninter-logo-1.png" alt="Logo Uninter">
+        </div> 
+
+        </a>
+    </footer>
+</body>
+</html>
