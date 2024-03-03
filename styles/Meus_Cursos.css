@@ -1,0 +1,132 @@
+body {
+    background-color: rgb(0, 74, 173);
+    color: rgb(255, 255, 255); 
+    font-family: 'Roboto', sans-serif; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 15px;
+    padding-bottom: 100px; 
+}
+
+header ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+    display: flex;
+    justify-content: space-between;
+}
+
+header #usuario {
+    margin-left: auto;
+}
+
+#usuario img {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+li { 
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    color: white;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgb(173, 216, 230);
+    font-size: 22px;
+    transition: 0.3s all;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 15px;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 56px;
+    padding: 10px;
+}
+
+article img {
+    width: 610px;
+    padding-top: 20px;
+    margin-bottom: 40px;
+    margin-right: 70px;
+}
+
+span{
+    color: rgb(173, 216, 230);
+}
+
+p {
+    font-size: 15px;
+    padding: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(34, 127, 250);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    margin: 0px;
+    font-size: 10px;
+}
+
+footer img {
+    width: 100px;
+    height: 50px;
+    padding: 0px;
+}
+
+.curso_mkt,
+.curso_ngc,
+.curso_web {
+    width: 33.33%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    padding: 0 10px;
+}
+
+.curso_mkt img,
+.curso_ngc img,
+.curso_web img {
+    width: 100%;
+    height: auto;
+    border-radius: 1%;
+    transition: transform 0.3s;
+}
+
+.curso_mkt img:hover,
+.curso_ngc img:hover, 
+.curso_web img:hover {
+    transform: scale(1.05);
+}
+
+#texto p {
+    color: rgb(0, 74, 173);
+    font-size: 56px;
+}

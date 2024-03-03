@@ -1,0 +1,132 @@
+body {
+    background-color: rgb(0, 74, 173);
+    color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    padding-bottom: 100px;
+}
+
+span {
+    color: rgb(173, 216, 230);
+}
+
+header ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+header #usuario {
+    margin-left: auto;
+}
+
+#usuario img {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+li {
+    display: inline-block;
+    margin: 20px;
+}
+
+a {
+    color: white;
+    font-size: 21px;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(173, 216, 230);
+    font-size: 22px;
+    transition: 0.3s all;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+h2#mensagemParabens {
+    font-size: 56px;
+    padding: 10px;
+    white-space: pre-line;
+}
+
+h3 {
+    font-size: 25px;
+    padding: 10px;
+}
+
+article img {
+    width: 790px;
+    justify-content: right;
+}
+
+.download-button {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(34, 127, 250);
+    font-weight: bolder;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.download-button:hover {
+    background-color: rgb(29, 106, 207);
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%; 
+    animation: fall 1s linear;
+}
+
+@keyframes fall {
+    from {
+        top: -40%; 
+        transform: rotate(0deg); 
+    }
+    to {
+        top: 250%; 
+        transform: rotate(360deg); 
+    }
+}
+
+#certificado {
+    width: 790px;
+    justify-content: right;
+    animation: jump 0.5s ease-out forwards;
+}
+
+#certificado.show {
+    opacity: 1;
+}
+
+@keyframes jump {
+    0% {
+      transform: translateY(-50px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50px);
+    }
+}
